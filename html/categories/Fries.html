@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<title>Tony Lukes</title>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet" />
+    <script src="../Main.js"></script>
+</head>
+
+<body>
+    <div id="navBar">
+        <a href="../../index.html" class="navBtn">Home</a>
+        <a href="../Location.html" class="navBtn">Location</a>
+        <a href="../Order.html" class="navBtn" style="animation:blinking 1.5s infinite;">Order Now!</a>
+        <a href="../Menu.html" class="navBtn">Pricing</a>
+        <a href="../Cart.html" class="navBtn" style="float:right; padding:0px;"> <img src=" ../../imgs/Cart.jpg"
+                id="crtImg"></a>
+    </div>
+    <div class="ordWrap">
+        <br>
+        *Any modifications to preselected toppings may incur extra charge. Check Menu for full pricing
+        <form id="fries" action="" method="post">
+            <h1>Fries:</h1>
+            <div class="stkMen" style="grid-template: 100px 100px 100px 100px / auto auto auto;">
+                <input class="inp" type="radio" id="plf" name="Fries" value="Plain Fries">
+                <label for="plf" onclick="defSel(this.htmlFor,['noch']);">Plain Fries</label>
+                <input class="inp" type="radio" id="cf" name="Fries" value="Cheese Fries">
+                <label for="cf" onclick="defSel(this.htmlFor,['chos']);">Cheese Fries</label>
+                <input class="inp" type="radio" id="lf" name="Fries" value="Loaded Fries">
+                <label for="lf" onclick="defSel(this.htmlFor,['chon']);">Loaded Fries</label>
+                <input class="inp" type="radio" id="chf" name="Fries" value="Chipotle Fries">
+                <label for="chf" onclick="defSel(this.htmlFor,['noch']);">Chipotle Fries</label>
+                <input class="inp" type="radio" id="cjf" name="Fries" value="Cajun Fries">
+                <label for="cjf" onclick="defSel(this.htmlFor,['noch']);">Cajun Fries</label>
+                <input class="inp" type="radio" id="mar" name="Fries" value="Maryland Fries">
+                <label for="mar" onclick="defSel(this.htmlFor,['noch']);">Maryland Fries</label>
+                <input class="inp" type="radio" id="sv" name="Fries" value="Salt/Vinegar Fries">
+                <label for="sv" onclick="defSel(this.htmlFor,['noch']);">Salt/Vinegar Fries</label>
+                <input class="inp" type="radio" id="gf" name="Fries" value="Garlic Parm Fries">
+                <label for="gf" onclick="defSel(this.htmlFor,['noch']);">Garlic Parm Fries</label>
+                <input class="inp" type="radio" id="sf" name="Fries" value="Steak Fries">
+                <label for="sf" onclick="defSel(this.htmlFor,['chon']);">Steak Fries</label>
+                <input class="inp" type="radio" id="ppf" name="Fries" value="Pepperoni Pizza Fries">
+                <label for="ppf" onclick="defSel(this.htmlFor,['chon']);">Pepperoni Pizza Fries</label>
+                <input class="inp" type="radio" id="pf" name="Fries" value="Pizza Fries">
+                <label for="pf" onclick="defSel(this.htmlFor,['chon']);">Pizza Fries</label>
+            </div>
+            <h1>Waffle Fries:</h1>
+            <div class="stkMen" style="grid-template: 100px / auto auto auto;">
+                <input class="inp" type="radio" id="wf" name="Fries" value="Waffle Fries">
+                <label for="wf" onclick="defSel(this.htmlFor,['chos']);">Waffle Fries</label>
+                <input class="inp" type="radio" id="lwf" name="Fries" value="Loaded Waffle Fries">
+                <label for="lwf" onclick="defSel(this.htmlFor,['chon']);">Loaded Waffle Fries</label>
+                <input class="inp" type="radio" id="bwf" name="Fries" value="Buffalo Chicken Waffle Fries">
+                <label for="bwf" onclick="defSel(this.htmlFor,['chon']);">Buffalo Chicken Waffle Fries</label>
+            </div>
+            <h1>Whiz?</h1>
+            <div class="stkMen" style="grid-template: 100px/ auto auto auto;">
+                <input class="inp" type="radio" id="chon" name="Mods" value="Chz On">
+                <label for="chon">Whiz On Fries</label>
+                <input class="inp" type="radio" id="chos" name="Mods" value="Chz On Side">
+                <label for="chos">Whiz On the Side</label>
+                <input class="inp" type="radio" id="noch" name="Mods" value="">
+                <label for="noch">No Whiz</label>
+            </div>
+            <div class="stkMen" style="display:block;">                <h1>Special Instructions:</h1>
+                <input type="text" id="spIns" name="Instructions">
+            </div>
+            <div id="crtCont">
+                <input id="adCt" type="button" value="Add to Cart" onclick="addCrt(this.form)">
+                <input id="emCt" type="button" value="Empty Cart" onclick="emptCrt()">
+            </div>
+        </form>
+    </div>
+    <div id="loader" style="display:none;"></div>
+    <div id="ldBkg" style="display:none;"></div>
+    <div id="footer">
+        Ordering Only for <br>
+        Tony Lukes in <br>
+        Philadelphia Premium Outlets<br>
+    </div>
+</body>
+
+</html>

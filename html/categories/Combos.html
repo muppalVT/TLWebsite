@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<title>Tony Lukes</title>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet" />
+    <script src="../Main.js"></script>
+</head>
+
+<body>
+    <div id="navBar">
+        <a href="../../index.html" class="navBtn">Home</a>
+        <a href="../Location.html" class="navBtn">Location</a>
+        <a href="../Order.html" class="navBtn" style="animation:blinking 1.5s infinite;">Order Now!</a>
+        <a href="../Menu.html" class="navBtn">Pricing</a>
+        <a href="../Cart.html" class="navBtn" style="float:right; padding:0px;"> <img src=" ../../imgs/Cart.jpg"
+                id="crtImg"></a>
+    </div>
+    <div class="ordWrap">
+        <form id="combos" action="" method="post">
+            <h1>Kids Meals:</h1>
+            <div class="stkMen" style="grid-template: 100px/ auto auto auto;">
+                <input class="inp" type="checkbox" id="tm" name="Combos" value="Tender Meal">
+                <label for="tm">Kids Tenders/Fries</label>
+                <input class="inp" type="checkbox" id="hm" name="Combos" value="Ham SW Meal">
+                <label for="hm">Kids Ham/Fries</label>
+                <input class="inp" type="checkbox" id="hdm" name="Combos" value="Hot Dog Meal">
+                <label for="hdm">Kids Hot Dog/Fries</label>
+
+            </div>
+            <h1>Combos:</h1>
+            <div class="stkMen" style="grid-template: 100px 100px/ auto auto auto;">
+                <input class="inp" type="checkbox" id="tpc" name="Combos" value="3 Piece Combo">
+                <label for="tpc">3 Piece Combo</label>
+                <input class="inp" type="checkbox" id="spc" name="Combos" value="6 Piece Combo">
+                <label for="spc">6 Piece Combo</label>
+                <input class="inp" type="checkbox" id="wc" name="Combos" value="Wing Combo">
+                <label for="wc">Wing Combo</label>
+                <input class="inp" type="checkbox" id="sc" name="Combos" value="Shrimp Combo">
+                <label for="sc">Shrimp Combo</label>
+                <input class="inp" type="checkbox" id="ac" name="Combos" value="Make Any SW a Combo">
+                <label for="ac">Make it a Combo</label>
+            </div>
+            <div class="stkMen" style="display:block;">
+                <h1>Special Instructions:</h1>
+                <input type="text" id="spIns" name="Instructions">
+            </div>
+    </div>
+    <div id="crtCont">
+        <input id="adCt" type="button" value="Add to Cart" onClick="addCrt(this.form)">
+        <input id="emCt" type="button" value="Empty Cart" onClick="emptCrt()">
+    </div>
+    </form>
+    <div id="loader" style="display:none;"></div>
+    <div id="ldBkg" style="display:none;"></div>
+    <div id="footer">
+        Ordering Only for <br>
+        Tony Lukes in <br>
+        Philadelphia Premium Outlets<br>
+    </div>
+</body>
+
+</html>

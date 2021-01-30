@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet" />
+    <script src="Main.js"></script>
+</head>
+
+<body onload="jsonTab()">
+    <div id="navBar">
+        <a href="../index.html" class="navBtn">Home</a>
+        <a href="Location.html" class="navBtn">Location</a>
+        <a href="Order.html" class="navBtn" style="animation:blinking 1.5s infinite;">Order Now!</a>
+        <a href="Menu.html" class="navBtn">Pricing</a>
+        <a href="Cart.html" class="navBtn" style="float:right; padding:0px;"> <img src=" ../../imgs/Cart.jpg"
+                id="crtImg"></a>
+    </div>
+    <div id="crtWrap">
+        <p id="table"></p>
+        <div class="stkMen">
+            <form id="frmSub" method="GET" action="../Mail.php" target="_blank">
+                <!-- <form id="frmSub"> -->
+                <input id="frmsubDat" name="Data" type="hidden" value="">
+                <h1>Name for Pickup:</h1>
+                <input class="subInp" id="cName" name="Name" type="text">  
+                <h1>Phone Number:</h1>
+                <input class="subInp" id="cPh" name="Phone" type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                <h1>Time for Pickup at<br>
+                    Tony Lukes Philadelphia Premium Outlets:
+                </h1>
+                <input class="subInp" id="cPick" name="Time" type="time" min="11:00" max="20:30">
+                <button onclick="submitOrd()">Submit Order</button>
+            </form>
+            
+        </div>  
+    </div>
+      
+    
+    
+</body>
+
+</html>

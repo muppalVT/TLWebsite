@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<title>Tony Lukes</title>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet" />
+    <script src="../Main.js"></script>
+</head>
+
+<body>
+    <div id="navBar">
+        <a href="../../index.html" class="navBtn">Home</a>
+        <a href="../Location.html" class="navBtn">Location</a>
+        <a href="../Order.html" class="navBtn" style="animation:blinking 1.5s infinite;">Order Now!</a>
+        <a href="../Menu.html" class="navBtn">Pricing</a>
+        <a href="../Cart.html" class="navBtn" style="float:right; padding:0px;"> <img src=" ../../imgs/Cart.jpg"
+                id="crtImg"></a>
+    </div>
+    <div class="ordWrap">
+        <br>
+        *Any modifications to preselected toppings may incur extra charge. Check Menu for full pricing
+        <form id="frdSds" action="" method="post">
+            <h1>Fried Sides:</h1>
+            <div class="stkMen" style="grid-template: 100px 100px 100px 100px 100px/ auto auto auto;">
+                <input class="inp" type="checkbox" id="plfHd" name="Fries" value="Plain Fries" style="display:none">
+                <input class="inp" type="radio" id="win" name="Sides" value="Wings">
+                <label for="win" onclick="sidMds(this.htmlFor,0);"> Wings (6)</label>
+                <input class="inp" type="radio" id="bwin" name="Sides" value="Boneless Wings">
+                <label for="bwin" onclick="sidMds(this.htmlFor,2);">Boneless Wings</label>
+                <input class="inp" type="radio" id="mz" name="Sides" value="Mozerella Sticks">
+                <label for="mz" onclick="unMd();">Mozzarella Sticks (6)</label>
+                <input class="inp" type="radio" id="jal" name="Sides" value="Jalepeneo Poppers">
+                <label for="jal" onclick="unMd();">Jalapeno Poppers</label>
+                <input class="inp" type="radio" id="fmc" name="Sides" value="Fried Mac N Cheese">
+                <label for="fmc" onclick="unMd();">Fried Mac N Cheese (8)</label>
+                <input class="inp" type="radio" id="tat" name="Sides" value="Tater Tots">
+                <label for="tat" onclick="sidMds(this.htmlFor,1);">Tater Tots</label>
+                <input class="inp" type="radio" id="fpic" name="Sides" value="Fried Pickles">
+                <label for="fpic" onclick="unMd();">Fried Pickles</label>
+                <input class="inp" type="radio" id="bb" name="Sides" value="Brocoli Bites">
+                <label for="bb" onclick="unMd();">Broccoli Bites</label>
+                <input class="inp" type="radio" id="cn" name="Sides" value="Corn Nuggets">
+                <label for="cn" onclick="unMd();">Corn Nuggets</label>
+                <input class="inp" type="radio" id="frav" name="Sides" value="Fried Ravioli">
+                <label for="frav" onclick="unMd();">Fried Ravioli</label>
+                <input class="inp" type="radio" id="sam" name="Sides" value="Samosa">
+                <label for="sam" onclick="unMd();">Samosas (5)</label>
+                <input class="inp" type="radio" id="fshr" name="Sides" value="Fried Shrimp">
+                <label for="fshr" onclick="unMd();">Fried Shrimp</label>
+                <input class="inp" type="radio" id="jp" name="Sides" value="Jamaican Patties">
+                <label for="jp" onclick="unMd();">Jamaican Patties (2)</label>
+                <input class="inp" type="radio" id="hd" name="Sides" value="Hot Dog">
+                <label for="hd" onclick="unMd();">Hot Dog</label>
+            </div>
+            <h1>Modifications:</h1>
+            <div id="sidMds" style="grid-template: 100px 100px  / auto auto; display: none;">
+            </div>
+            <div class="stkMen" style="display:block;">
+                <h1>Special Instructions:</h1>
+                <input type="text" id="spIns" name="Instructions">
+            </div>
+            <div id="crtCont">
+                <input id="adCt" type="button" value="Add to Cart" onclick="addCrt(this.form)">
+                <input id="emCt" type="button" value="Empty Cart" onclick="emptCrt()">
+            </div>
+        </form>
+    </div>
+    <div id="loader" style="display:none;"></div>
+    <div id="ldBkg" style="display:none;"></div>
+    <div id="footer">
+        Ordering Only for <br>
+        Tony Lukes in <br>
+        Philadelphia Premium Outlets<br>
+    </div>
+</body>
+
+</html>

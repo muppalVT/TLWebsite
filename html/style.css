@@ -1,0 +1,296 @@
+body,
+html {
+  height: 100%;
+}
+body,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bangers", serif;
+}
+h1 {
+  font-size: 4.4vmax;
+  color: red;
+  text-align: center;
+}
+p {
+  font-family: sans-serif;
+  text-indent: 3%;
+}
+.menu {
+  display: none;
+}
+#bgCont {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../imgs/Steaks.jpg");
+  min-height: 90%;
+}
+
+#navBar {
+  display: inline-block;
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  position: sticky;
+}
+.navBtn {
+  padding: 1vw 1vh;
+  float: left;
+  width: auto;
+  border: none;
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 3vh;
+}
+
+#crtImg{
+  height: 6.5vmin;width:auto;
+}
+
+
+.navBtn:hover {
+  background-color: grey;
+}
+#logoCont {
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+@keyframes blinking{
+0%{   color: red;   }
+62%{   color: white; }
+100%{  color:red;   }
+}
+#logo {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.overContbl {
+  position: absolute;
+  bottom: 11vh;
+  left: 2.5vmax;
+  font-size: 1.9vmax;
+  padding: 1vmax;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.overConttl {
+  position: absolute;
+  top: 7vmax;
+  left: 2.5vmax;
+  padding: 1vmin;
+  font-size: 1.9vmax;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+#footer {
+  height: 22%;
+  background-color: grey;
+  text-align: center; 
+  font-size: 7.2vmin; 
+  padding: 2vmin;
+}
+#catWrap {
+  text-align: center;
+}
+.cat {
+  margin: 3vw;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 30vh 30vh 30vh;
+  grid-gap: 1vmax;
+  background-color: #fff;
+  color: #444;
+}
+.catCont {
+  background-color: #444;
+  border-radius: 5px;
+  padding: 2vmax;
+  line-height: 25vh;
+}
+.catBtn {
+  text-decoration: none;
+  font-size: 4.4vmax;
+  padding: 2vh .7vmax 2vh .7vmax;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+}
+
+.ordBtn {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+.stkMen {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 100px 100px;
+}
+
+.inp {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.inp:checked + label {
+  background-color:rgba(128, 53, 53, 0.7);
+}
+
+label {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  text-align: center;
+  padding-top: 10px;
+  background-color: aqua;
+  border-radius: 5px;
+  font-size: 24px;
+}
+
+.subInp {
+  padding: 10px;
+  width: 100%;
+  font-size: 24px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+.subLab {
+   all: initial;
+   float:left;
+   margin-right: 10px;
+   font-size: 24px;
+}
+
+
+#sub{
+  margin:10px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.modcont {
+  font-size: 16px;
+  font-style: bold;
+}
+#Mods {
+  background-color: #ffffff;
+  margin: 100px auto;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+}
+/* Style the input fields */
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 24px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+/* Hide all steps by default: */
+/* Make circles that indicate the steps of the form: */
+
+#ldBkg{
+  position: sticky;
+  top:0px;
+  bottom: 0px;
+background: rgba(0, 0, 0, 0.5); 
+  height: 100%;
+  width:  100%;
+  z-index: 99;
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  z-index: 100;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+#crtCont{
+  margin: 20px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 100px;
+  border-radius: 50px;
+}
+
+#crtWrap{
+ display: table;
+  margin: 0 auto;
+}
+
+button{
+  margin-top: 20px;
+  width:106%;
+  height:70px;
+}
+
+.ordWrap{
+  width:85%;
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
+#table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+}
+
+#table td, #table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#table tr:nth-child(even){background-color: #f2f2f2;}
+
+#table tr:hover {background-color: #ddd;}
+
+#table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #af4c61;
+  color: white;
+}
+
+#map {
+  height: 600px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+

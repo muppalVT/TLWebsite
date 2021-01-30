@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<title>Tony Lukes</title>
+
+<head>
+   <link rel="stylesheet" type="text/css" href="../style.css" />
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" />
+   <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet" />
+   <script src="../Main.js"></script>
+</head>
+
+<body>
+   <div id="navBar">
+      <a href="../../index.html" class="navBtn">Home</a>
+      <a href="../Location.html" class="navBtn">Location</a>
+      <a href="../Order.html" class="navBtn" style="animation:blinking 1.5s infinite;">Order Now!</a>
+      <a href="../Menu.html" class="navBtn">Pricing</a>
+      <a href="../Cart.html" class="navBtn" style="float:right; padding:0px;"> <img src=" ../../imgs/Cart.jpg"
+            id="crtImg"></a>
+   </div>
+   <div class="ordWrap">
+      <br>
+      *Any modifications to preselected toppings may incur extra charge. Check Menu for full pricing
+      <form id="stkMds" action="" method="post">
+         <h1>Steak Type (Choose One):</h1>
+         <div class="stkMen">
+            <input class="inp" type="radio" id="ps" name="Style" value="Plain Steak">
+            <label for="ps" onclick="defSel(this.htmlFor,[]);">Plain Steak</label>
+            <input class="inp" type="radio" id="cs" name="Style" value="Cheese Steak">
+            <label for="cs"onclick="defSel(this.htmlFor,[]);">Cheese Steak</label>
+            <input class="inp" type="radio" id="si" name="Style" value="Italian Steak">
+            <label for="si" onclick="defSel(this.htmlFor,['shp','bro']);">Steak Italian</label>
+            <input class="inp" type="radio" id="cho" name="Style" value="Hoagie Steak ">
+            <label for="cho" onclick="defSel(this.htmlFor,['mayo','let','tom','let','pick','amer']);">Hoagie Steak</label>
+            <input class="inp" type="radio" id="bs" name="Style" value="Buffalo Steak">
+            <label for="bs" onclick="defSel(this.htmlFor,['blc','hs','amer']);">Buffalo Steak</label>
+            <input class="inp" type="radio" id="pis" name="Style" value="Pizza Steak">
+            <label for="pis" onclick="defSel(this.htmlFor,['mari','mldp']);">Pizza Steak</label>
+         </div>
+         <h1>Size (Choose One):</h1>
+         <div class="stkMen" style="grid-template: 100px / auto auto;">
+            <input class="inp" type="radio" id="trad" name="Size" value="TRAD">
+            <label for="trad">Traditional</label>
+            <input class="inp" type="radio" id="jr" name="Size" value="JR">
+            <label for="jr">Junior</label>
+            
+         </div>
+         <h1>Chicken or Beef (Choose One): </h1>
+         <div class="stkMen" style="grid-template: 100px / auto auto;">
+            <input class="inp" type="radio" id="chk" name="Meat" value="Chicken">
+            <label for="chk">Chicken</label>
+            <input class="inp" type="radio" id="bff" name="Meat" value="Beef">
+            <label for="bff">Beef</label>
+            
+         </div>
+         <h1>Cheese: </h1>
+         <div class="stkMen" style="grid-template: 100px 100px / auto auto;">
+            <input class="inp" type="checkbox" id="amer" name="Cheese" value="American">
+            <label for="amer">American</label>
+            <input class="inp" type="checkbox" id="mldp" name="Cheese" value="Mild Provolone">
+            <label for="mldp">Mild Provolone</label>
+            <input class="inp" type="checkbox" id="shp" name="Cheese" value="Sharp Provolone">
+            <label for="shp">Sharp Provolone</label>
+            <input class="inp" type="checkbox" id="wh" name="Cheese" value="Whiz">
+            <label for="wh">Whiz</label>
+            <br>
+         </div>
+         <h1>Toppings: </h1>
+         <div class="stkMen" style="grid-template: 100px 100px 100px 100px / auto auto auto auto;">
+            <input class="inp" type="checkbox" id="let" name="Toppings" value="Lettuce">
+            <label for="let">Lettuce</label>
+            <input class="inp" type="checkbox" id="tom" name="Toppings" value="Tomato">
+            <label for="tom">Tomato</label>
+            <input class="inp" type="checkbox" id="fron" name="Toppings" value="Fried Onion">
+            <label for="fron">Fried Onion</label>
+            <input class="inp" type="checkbox" id="ron" name="Toppings" value="Raw Onion">
+            <label for="ron">Raw Onion</label>
+            <input class="inp" type="checkbox" id="hpep" name="Toppings" value="Hot Peppers">
+            <label for="hpep">Hot Peppers</label>
+            <input class="inp" type="checkbox" id="pick" name="Toppings" value="Pickles">
+            <label for="pick">Pickles</label>
+            <input class="inp" type="checkbox" id="sp" name="Toppings" value="Sweet Peppers">
+            <label for="sp">Sweet Peppers</label>
+            <input class="inp" type="checkbox" id="ms" name="Toppings" value="Mushrooms">
+            <label for="ms">Mushrooms</label>
+            <input class="inp" type="checkbox" id="bac" name="Toppings" value="Bacon">
+            <label for="bac">Bacon</label>
+            <input class="inp" type="checkbox" id="gf" name="Toppings" value="Gluten Free Roll">
+            <label for="gf">Gluten Free Roll</label>
+            <input class="inp" type="checkbox" id="cha" name="Toppings" value="Cut in Half">
+            <label for="cha">Cut in Half</label>
+            <input class="inp" type="checkbox" id="em" name="Toppings" value="Extra Meat">
+            <label for="em">Extra Meat</label>
+            <input class="inp" type="checkbox" id="mw" name="Toppings" value="Make it Wrap">
+            <label for="mw">Make it a Wrap</label>
+            <input class="inp" type="checkbox" id="spi" name="Toppings" value="Spinach">
+            <label for="spi">Spinach Greens</label>
+            <input class="inp" type="checkbox" id="bro" name="Toppings" value="Brocolli">
+            <label for="bro">Brocolli Rabe</label>
+            <input class="inp" type="checkbox" id="lh" name="Toppings" value="Long Hots">
+            <label for="lh">Long Hots</label>
+            <br>
+         </div>
+         <h1>Sauces: </h1>
+         <div class="stkMen" style="grid-template: 100px 100px 100px 100px / auto auto auto auto;">
+            <input class="inp" type="checkbox" id="mayo" name="Toppings" value="Mayo">
+            <label for="mayo">Mayo</label>
+            <input class="inp" type="checkbox" id="ket" name="Toppings" value="Ketchup">
+            <label for="ket">Ketchup</label>
+            <input class="inp" type="checkbox" id="mus" name="Toppings" value="Mustard">
+            <label for="mus">Mustard</label>
+            <input class="inp" type="checkbox" id="hs" name="Toppings" value="Hot Sauce">
+            <label for="hs">Hot Sauce</label>
+            <input class="inp" type="checkbox" id="bbq" name="Toppings" value="BBQ">
+            <label for="bbq">BBQ</label>
+            <input class="inp" type="checkbox" id="hm" name="Toppings" value="Honey Mustard">
+            <label for="hm">Honey Mustard</label>
+            <input class="inp" type="checkbox" id="mari" name="Toppings" value="Marinara">
+            <label for="mari">Marinara</label>
+            <input class="inp" type="checkbox" id="chp" name="Toppings" value="Chipotle">
+            <label for="chp">Chipotle</label>
+            <input class="inp" type="checkbox" id="blc" name="Toppings" value="Blue Cheese">
+            <label for="blc">Blue Cheese</label>
+            <input class="inp" type="checkbox" id="ter" name="Toppings" value="Teriyaki">
+            <label for="ter">Teriyaki</label>
+            <input class="inp" type="checkbox" id="ran" name="Toppings" value="Ranch">
+            <label for="ran">Ranch</label>
+            <input class="inp" type="checkbox" id="oil" name="Toppings" value="Oil">
+            <label for="oil">Oil</label>
+            <input class="inp" type="checkbox" id="vin" name="Toppings" value="Vinegar">
+            <label for="vin">Vinegar</label>
+            <br>
+         </div>
+         <div class="stkMen" style="display:block;">
+            <h1>Label/Name for item:</h1>
+            <input type="text" id="itemLab" name="Name/Label">
+            <h1>Special Instructions:</h1>
+            <input type="text" id="spIns" name="Instructions">
+         </div>
+         <div id="crtCont">
+            <input id="adCt" type="button" value="Add to Cart" onClick="addCrt(this.form)">
+            <input id="emCt" type="button" value="Empty Cart" onClick="emptCrt()">
+         </div>
+      </form>
+   </div>
+   <div id="loader" style="display:none;"></div>
+   <div id="ldBkg" style="display:none;"></div>
+   <div id="footer">
+      Ordering Only for <br>
+      Tony Lukes in <br>
+      Philadelphia Premium Outlets<br>
+   </div>
+</body>
+
+</html>
